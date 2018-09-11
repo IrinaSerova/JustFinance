@@ -1,3 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-nav></app-nav>
+
+
 <router-outlet></router-outlet>
+
+  <div class="main-container">
+    <header class="header">
+        CHART
+    </header>
+    <div class="content-container">
+        <div class="content-area">
+            <router-outlet></router-outlet>
+        </div>
+        <clr-vertical-nav>
+          <app-nav></app-nav>
+           
+        </clr-vertical-nav>
+    </div>
+</div>
+
