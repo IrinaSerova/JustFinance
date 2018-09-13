@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
@@ -14,6 +15,8 @@ import { MaxComponent } from './max/max.component';
 import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { routes } from './app.router';
+import { ApiService } from './api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,9 +35,11 @@ import { routes } from './app.router';
     BrowserModule,
     ClarityModule,
     BrowserAnimationsModule,
-    routes
+    routes,
+    HttpClientModule,
+    ChartsModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
